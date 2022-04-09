@@ -26,7 +26,7 @@ public class StatsService {
         return monthMax;
     }
 
-    public int maxSalessMonth(long[] sales) { //Номер месяца, в котором был пик продаж "Второй вариант решения условия"
+    public int maxSalesMonth(long[] sales) { //Номер месяца, в котором был пик продаж "Второй вариант решения условия"
         int maxMonth = 0;
         for (int month = 0; month < sales.length; month++) {
             if (sales[month] >= sales[maxMonth]) {
@@ -36,7 +36,7 @@ public class StatsService {
         return maxMonth + 1;
     }
 
-    public int minSalessMonth(int[] sales) { //Номер месяца, в котором был минимум продаж "Первый вариант решения условия"
+    public int minSalesMonth(int[] sales) { //Номер месяца, в котором был минимум продаж "Первый вариант решения условия"
         int minMonth = 0;
         int month = 0;
         for (int sale : sales) {
@@ -48,7 +48,7 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int belowAverageSaless(long[] sales) {
+    public int belowAverageSales(long[] sales) {
         long average = calcSumAverage(sales);
         int count = 0;
         for (long sale : sales) {
@@ -59,7 +59,7 @@ public class StatsService {
         return count;
     }
 
-    public int aboveAverageSaless(long[] sales) { // Кол-во месяцев, в которых продажи были выше среднего
+    public int aboveAverageSales(long[] sales) { // Кол-во месяцев, в которых продажи были выше среднего
         long average = calcSumAverage(sales);
         int count = 0;
         for (long sale : sales) {

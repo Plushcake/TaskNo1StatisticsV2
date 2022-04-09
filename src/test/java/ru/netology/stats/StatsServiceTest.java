@@ -42,50 +42,50 @@ class StatsServiceTest {
 
     @org.junit.jupiter.api.Test
         //Номер месяца, в котором был пик продаж
-    void shouldMaxSalessMonth() {
+    void shouldMaxSalesMonth() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 8;
 
-        long actual = service.maxSalessMonth(sales);
+        long actual = service.maxSalesMonth(sales);
 
         assertEquals(expected, actual);
     }
 
     @org.junit.jupiter.api.Test
         //Номер месяца, в котором был минимум продаж
-    void shouldMinSalessMonth() {
+    void shouldMinSalesMonth() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 9;
 
-        int actual = service.minSalessMonth(sales);
+        int actual = service.minSalesMonth(sales);
 
         assertEquals(expected, actual);
     }
 
     @org.junit.jupiter.api.Test
         //Кол-во месяцев, в которых продажи были ниже среднего
-    void shouldBelowAverageSaless() {
+    void shouldBelowAverageSales() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 5;
         //long actual = service.calcSumAverage(sales);
 
 
-        long actual = service.belowAverageSaless(sales);
+        long actual = service.belowAverageSales(sales);
 
         assertEquals(expected, actual);
     }
 
     @org.junit.jupiter.api.Test
         //Кол-во месяцев, в которых продажи были ниже среднего
-    void shouldAboveAverageSaless() {
+    void shouldAboveAverageSales() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expected = 5;
 
-        long actual = service.aboveAverageSaless(sales);
+        long actual = service.aboveAverageSales(sales);
 
         assertEquals(expected, actual);
     }
